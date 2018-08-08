@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../13_vue指令demo/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- v ue-app是根容器 -->
+    <div id="vue-app">
+        <!-- 图片 -->
+        <!-- 绑定新class样式:当ended为ture的时候才会展示这个样式 -->
+        <div id="bag" v-bind:class="{burst:ended}"></div>
+
+        <!-- 进度情况 -->
+        <div id="bag-health">
+            <!-- 绑定样式中的属性 宽度 -->
+            <div v-bind:style="{width:health + '%'}"></div>
+        </div>
+
+        <!-- 控制按钮 -->
+        <div id="controls">
+            <button v-on:click="punch" v-show="!ended">使劲敲</button>
+            <button v-on:click="restart">重新开始</button>
+        </div>
+
+    </div>
+    <script src="../13_vue指令demo/app.js"></script>
+</body>
+
+</html>

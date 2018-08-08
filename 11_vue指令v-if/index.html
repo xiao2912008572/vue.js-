@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../11_vue指令v-if/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- v ue-app是根容器 -->
+    <div id="vue-app">
+        <h1>v-if 条件</h1>
+
+        <!-- 显示错误 -->
+        <button v-on:click="error=!error ">Toogle Error</button>
+
+        <!-- 显示成功 -->
+        <button v-on:click="success=!success">Toogle Success</button>
+
+        <!-- <p v-if="error">网络连接错误：404</p>
+        <p v-else-if ="success">网络连接成功：200</p> -->
+
+        <p v-show="error">网络连接错误：404</p>
+        <p v-show="success">网络连接成功：200</p>
+
+
+    </div>
+    <script src="../11_vue指令v-if/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../10_vue动态绑定CSS/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- vue-app是根容器 -->
+    <div id="vue-app">
+        <h1>动态 CSS Class</h1>
+
+        <!-- 绑定类名要么true，要么false -->
+        <!-- class后面跟属性 {} -->
+        <h2 v-bind:class="{red:true}">示例 1</h2>
+
+        <!-- 绑定点击：取反操作 -->
+        <!-- <div v-on:click="changeColor=!changeColor" v-bind:class="{changeColor:changeColor}">
+            <span>Henry</span>
+        </div> -->
+
+        <h2>示例 2</h2>
+        <button v-on:click="changeColor = !changeColor">change color</button>
+        <button v-on:click="changeLength = !changeLength">change length</button>
+       
+        <!-- 绑定类：计算属性 -->
+        <div v-bind:class="compClasses">
+            <span>Henry</span>
+        </div>
+
+    </div>
+    <script src="../10_vue动态绑定CSS/app.js"></script>
+</body>
+
+</html>

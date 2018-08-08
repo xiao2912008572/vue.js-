@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../1/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- vue-app是根容器 -->
+    <div id="vue-app">
+        <!-- 调用方法：属性没有括号，方法有括号 -->
+        <h1>{{greet('afternoon')}}</h1>
+
+        <!-- 通过{{}}的形式引用变量 -->
+        <p>{{name}}</p>
+        <p>{{job}}</p>
+
+        <!-- 将属性绑定到a标签中 -->
+        <!-- 使用v-bind 绑定属性 -->
+        <a v-bind:href="website">web开发</a>
+        <input type="text" v-bind:value="name">
+
+        <!-- 使用v-html 绑定标签 -->
+        <p v-html="websiteTag"></p>
+
+    </div>
+    <script src="../4_vue属性绑定/app.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../5_vue事件/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- vue-app是根容器 -->
+    <div id="vue-app">
+        <h1> Events </h1>
+
+        <!-- ⚠️ 1. 在{{}}中调用方法一定要给括号 -->
+        <!-- ⚠️ 2. 在事件中，可以给括号也可以不给括号，传参的时候必须给括号 -->
+        <button @click.once="add(1)">涨一岁</button>
+        <button v-on:click="subtract(1)">减一岁</button>
+
+        <button @dblclick="add(10)">涨十岁</button>
+        <button v-on:dblclick="subtract(10)">减十岁</button>
+
+        <div id="canvas" v-on:mousemove="updateXY">
+            {{x}} , {{y}} -
+
+            <!-- 方式1. 利用v-on绑定阻止冒泡事件的方法阻止 -->
+            <!-- <span v-on:mousemove="stopMoving"> Stop Moving </span> -->
+
+            <!-- 方式2. 利用事件修饰符来阻止鼠标移动冒泡事件  -->
+            <span v-on:mousemove.stop> Stop Moving </span>
+
+        </div>
+
+        <p>My age is {{age}}</p>
+
+        <!-- 阻止默认事件：a标签的跳转 -->
+        <a v-on:click.prevent="alert" href="http://www.thenewstep.com">The new step</a>
+    </div>
+    <script src="../6_vue事件修饰符/app.js"></script>
+</body>
+
+
+</html>

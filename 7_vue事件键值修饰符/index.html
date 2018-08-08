@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../5_vue事件/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- vue-app是根容器 -->
+    <div id="vue-app">
+        <h1>键盘 Events</h1>
+        <label>姓名</label>
+        <input type="text" v-on:keyup="logname">
+        <label>年龄</label>
+        <input type="text" v-on:keyup="logage">
+    </div>
+    <script src="../7_vue事件键值修饰符/app.js"></script>
+</body>
+
+
+</html>
